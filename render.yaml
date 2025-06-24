@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: agora-video-chat
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+      - key: VITE_AGORA_APP_ID
+        sync: false # Thiết lập thông qua Render dashboard
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html 
