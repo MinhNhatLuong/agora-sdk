@@ -6,7 +6,7 @@ services:
     staticPublishPath: ./dist
     envVars:
       - key: NODE_VERSION
-        value: 18
+        value: 16.20.0
       - key: VITE_AGORA_APP_ID
         sync: false # Thiết lập thông qua Render dashboard
     routes:
